@@ -1,0 +1,28 @@
+<!--about.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">{{pagename}}</view>
+    <view class="page__desc"></view>
+  </view>
+  <view class="page__bd">
+    <block wx:for="{{groupData}}" wx:key="{{index}}">
+      <view class="weui-cells__title">{{item.title}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cells weui-cells_after-title">
+          <!-- 基础信息 -->
+          <block wx:for="{{item.list}}" wx:key="*this">
+            <navigator wx:if="{{item.navigate}}" url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">{{item.desc}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">{{item.value}}</view>
+            </navigator>
+            <view wx:else class="weui-cell" hidden="{{item.disabled}}">
+              <view class="weui-cell__bd">{{item.desc}}</view>
+              <view class="weui-cell__ft">{{item.value}}</view>
+            </view>
+          </block>
+
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

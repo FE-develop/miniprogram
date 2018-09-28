@@ -1,0 +1,24 @@
+<view class="page page-index">
+  <view class="page__hd">
+    <view class="page__title has-avatar">
+      <text class="title-text">口袋盒</text>
+      <view class="user-avatar"><open-data type="userAvatarUrl"></open-data></view>
+    </view>
+    <view class="page__desc">口袋盒 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。</view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view data-item="{{item}}" hover-class="kind-list__item-hd_show" class="weui-flex kind-list__item-hd" bindtap="viewInfo">
+            <view class="weui-flex__item">{{item.name}}</view>
+            <image class="kind-list__img" src="../../images/index_icon_{{item.id}}.png"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="page__ft">
+    <image src="../../images/tabbar/app_shop_gray.png" style="width: 20px; height: 20px;"></image>口袋盒
+  </view>
+</view>

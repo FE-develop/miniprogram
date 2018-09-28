@@ -1,0 +1,15 @@
+<view class="container" wx:if="{{isShow}}">
+  <view class="cover-bg"></view>
+  <view class="auth-layer">
+    <image class="auth-img" src="../../images/wechat-auth.png" mode="aspectFit"></image>
+    <view class="auth-contents">
+      <view class="text-title">{{title}}</view>
+      <view class="text-desc">为了您能够正常使用我们的功能，需要您允许微信授权哟</view>
+      <view class="btn-auth">
+        去授权
+        <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+        <!-- <button open-type="openSetting" bindgetuserinfo="onGotUserInfo">授权</button> -->
+      </view>
+    </view>
+  </view>
+</view>

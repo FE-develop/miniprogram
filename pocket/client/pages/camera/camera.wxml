@@ -1,0 +1,14 @@
+<!--about.wxml-->
+<view class="page page-camera">
+  <view class="page__hd">
+    <view class="page__title">我的相机</view>
+    <view class="page__desc"></view>
+  </view>
+  <view class="page__bd">
+    <view>{{authStatus}}</view>
+    <camera class="my-camera" device-position="{{devicePosition}}" flash="{{flash}}"
+      bindstop="stopHandle"
+      binderror="errorHandle"
+      bindscancode="scancodeHandle"></camera>
+  </view>
+</view>

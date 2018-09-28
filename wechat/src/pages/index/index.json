@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "custom-toast": "../../components/customToast/customToast",
+    "auth-layer": "../../components/authLayer/authLayer",
+    "navigation-bar": "../../components/navigation-bar/index"
+  }
+}

@@ -1,0 +1,29 @@
+<!--about.wxml-->
+<view class="page page-screen">
+  <view class="page__hd">
+    <view class="page__title">当前亮度: {{brightness}}</view>
+    <view class="page__desc">屏幕亮度值，范围 0 ~ 1，0 最暗，1 最亮。若安卓系统设置中开启了自动调节亮度功能，则屏幕亮度会根据光线自动调整，该接口仅能获取自动调节亮度之前的值，而非实时的亮度值。</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">亮度调节</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="slider-box">
+            <slider class="slider" bindchanging="setScreenBrightness" min="0" max="1" step="0.01" value="{{brightness}}" show-value/>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">保持屏幕常亮</view>
+        <view class="weui-cell__ft">
+          <switch checked="{{status}}" bindchange="switch" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">设置是否保持常亮状态。仅在当前小程序生效，离开小程序后设置失效。</view>
+
+  </view>
+</view>

@@ -1,0 +1,73 @@
+// out: authLayer.wxss
+
+.center-transform() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.center-flex(@direction: 'row') {
+	display: flex;
+	flex-direction: @direction;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	.cover-bg {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, .6);
+		z-index: 99;
+	}
+	.auth-layer {
+		position: relative;
+		z-index: 99;
+		.center-transform();
+		padding: 40rpx;
+		background: #FFF;
+		border-radius: 10rpx;
+		.auth-img {
+			display: block;
+			width: 402rpx;
+			height: 240rpx;
+		}
+		.auth-contents { .center-flex(column) }
+		.text-title {
+			font-size: 32rpx;
+			font-weight: 700;
+		}
+		.text-desc {
+			margin: 20rpx auto 60rpx;
+			text-align: center;
+			font-size: 28rpx;
+			color: #909090;
+		}
+		.btn-auth {
+			.center-flex();
+			@h: 64rpx;
+			position: relative;
+			font-size: 28rpx;
+			width: 100%;
+			color: #FFF;
+			background: #26A114;
+			height: @h;
+			border-radius: @h/2;
+			overflow: hidden;
+			button {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				margin: 0;
+				padding: 0;
+				height: @h;
+				width: 100%;
+				opacity: 0;
+			}
+		}
+	}
+}

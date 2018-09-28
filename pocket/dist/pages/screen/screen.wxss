@@ -1,0 +1,7 @@
+.page-screen .slider-box {
+  height: 88rpx;
+}
+.page-screen .slider-box .slider {
+  position: relative;
+  top: 16rpx;
+}

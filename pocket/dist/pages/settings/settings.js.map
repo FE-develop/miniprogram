@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/settings/settings.js"],"names":["app","getApp","Page","data","pagename"],"mappings":";;AAAA,IAAMA,MAAMC,QAAZ;AACAC,KAAK;AACHC,QAAM;AACJC,cAAU;AADN;AADH,CAAL","file":"settings.js","sourcesContent":["const app = getApp();\nPage({\n  data: {\n    pagename: 'settings'\n  }\n})\n"]}

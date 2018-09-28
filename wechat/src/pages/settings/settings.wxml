@@ -1,0 +1,37 @@
+<!-- components -->
+<auth-layer isShow="{{authStatus}}" bindgotUserInfo="onGotUserInfo" wx:if="{{!userInfo}}"></auth-layer>
+
+<view class="container page-settings">
+  <view class="operate-list">
+    <view class="list-item" bindtap="toTest">
+      <view class="main-icon"><i class="iconfont ico_wechat"></i></view>
+      <text>自定义Toast</text>
+      <view class="arrow-icon"></view>
+    </view>
+    <navigator url="/pages/login/code" class="list-item">
+      <view class="main-icon"><i class="iconfont ico_suggestions"></i></view>
+      <text>验证码输入</text>
+      <view class="arrow-icon"></view>
+    </navigator>
+    <navigator url="/pages/login/login" class="list-item">
+      <view class="main-icon"><i class="iconfont ico_wait"></i></view>
+      <text>动画</text>
+      <view class="arrow-icon"></view>
+    </navigator>
+  </view>
+
+  <view class="operate-list">
+    <view class="list-item" bindtap="clearStorage">
+      <view class="main-icon"><i class="iconfont ico_delete"></i></view>
+      <text>清除缓存</text>
+    </view>
+    <!-- <view class="list-item" bindtap="toHandleAuth">
+      <view class="main-icon"><i class="iconfont ico_insured"></i></view>
+      <text>{{userInfo? '已授权' : '授权'}}</text>
+    </view> -->
+    <view class="list-item" bindtap="toHandleGetAddress">
+      <view class="main-icon"><i class="iconfont ico_insured"></i></view>
+      <text>获取微信地址</text>
+    </view>
+  </view>
+</view>
